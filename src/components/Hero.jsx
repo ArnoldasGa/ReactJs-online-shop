@@ -10,9 +10,6 @@ const Hero = () => {
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
       eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
-    <button class="bg-indigo-600 hover:bg-indigo-700 text-white text-xl mt-8 py-4 px-8 rounded-lg">
-      Get Started
-    </button>
     </div>
   )
 }

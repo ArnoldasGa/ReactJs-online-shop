@@ -7,9 +7,9 @@ function HomePage() {
     <>
     <Hero/>
       <div class="flex flex-wrap justify-center mt-10">
+        {/* <Card/>
         <Card/>
-        <Card/>
-        <Card/>
+        <Card/> */}
       </div>
     </>
   );

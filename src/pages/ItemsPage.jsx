@@ -6,6 +6,7 @@ function ItemsPage() {
 
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
 
   const getCategory = async () => {
     try {
@@ -18,13 +19,39 @@ function ItemsPage() {
     }
   };
 
+  const getProducys = async () => {
+    try {
+      const res = await axios.get("http://127.0.0.1:8005/products/");
+      setProducts(res.data);
+    } catch (error) {
+      console.error("Error fetching categories:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
     getCategory();
+    getProducys();
   }, []);
 
   return (
     <>
-      <div className="p-4 text-gray-600 dark:text-gray-300 outline-none focus:outline-none w-6/12 place-self-center">
+    <div className="flex">
+    {/* <aside className="flex-none">
+    <div className="p-4">
+      Kategorijos
+      {categories.map((category, index) => (
+          <div class="flex items-center space-x-2 rounded p-2 hover:bg-gray-100 accent-teal-600">
+          <input type="checkbox" id="javascriptCheckbox" name="languageCheckbox" class="h-4 w-4 rounded border-gray-300 text-teal-600 shadow-sm focus:border-teal-300 focus:ring focus:ring-teal-200 focus:ring-opacity-50 focus:ring-offset-0 disabled:cursor-not-allowed disabled:text-gray-400" />
+          <label for="javascriptCheckbox" class="flex w-full space-x-2 text-sm"> {category.category} </label>
+        </div>
+      )
+      )}
+    </div>
+    </aside> */}
+    <div className="flex-1">
+    <div className="p-4 text-gray-600 dark:text-gray-300 outline-none focus:outline-none w-6/12 place-self-center">
         <div className="relative flex">
           <select className="bg-white dark:bg-gray-800 h-10 px-5 rounded-l-full text-sm focus:outline-none outline-none border-2 border-gray-500 dark:border-gray-600 border-r-1 cursor-pointer max-h-10 overflow-y-hidden">
             {loading ? (
@@ -75,7 +102,14 @@ function ItemsPage() {
           </button>
         </div>
       </div>
-      <Card />
+      <section id="Projects"
+    class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
+      {products.map((product) => (
+      <Card key={product.id} product={product }/>
+      ))}
+    </section>
+    </div>
+    </div>
     </>
   );
 }

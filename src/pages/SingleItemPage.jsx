@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
+import FullProduct from "../components/FullProduct";
 
 function SingeItemPage() {
 
@@ -30,7 +31,7 @@ function SingeItemPage() {
             <div>Loading...</div>
           ) : (
               <div className="font-medium cursor-pointer" value="all">
-                {product.name}
+                <FullProduct key={product.id} product={product}/>
               </div>
               )
           }

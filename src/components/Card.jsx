@@ -12,9 +12,6 @@ function Card({product}) {
                 <p class="text-lg font-bold text-black truncate block capitalize">{product.name}</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">{product.price}€</p>
-                    {/* <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
-                    </del> */}
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"

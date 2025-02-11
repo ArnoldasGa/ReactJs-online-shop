@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hero {
+    height: 100vh;
+}
+
+input:checked~.dot {
+    transform: translateX(100%);
+    /* background-color: #132b50; */
+}
+
+.background-image {
+    background-image: url("/src/assets/img/470204460_1158037639448676_5105757898797315374_n.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* @layer base {
+    .lavender {
+        @apply bg-lavander-light dark:bg-lavander-dark
+    }
+} */
+
+/* body {
+    background-color: #D58D8D;
+} */
+
+/* body.dark {
+    background-color: #381717;
+} */
+/* 
+.light-mode {
+    background-color: #a78bfa;
+}
+
+.dark-mode {
+    background-color: #240a70;
+} */

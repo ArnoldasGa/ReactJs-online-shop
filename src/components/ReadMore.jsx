@@ -23,11 +23,9 @@ const ReadMore = ({ children }) => {
 const Content = (description) => {
     return (
         <div className="container">
-            {/* <h2> */}
                 <ReadMore>
                     {description}
                 </ReadMore>
-            {/* </h2> */}
         </div>
     );
 };

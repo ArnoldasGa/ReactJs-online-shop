@@ -8,7 +8,6 @@
 
 input:checked~.dot {
     transform: translateX(100%);
-    /* background-color: #132b50; */
 }
 
 .background-image {
@@ -19,15 +18,48 @@ input:checked~.dot {
     color: white;
 }
 
+.goTopHidden {
+    display:none;
+}
+
+.goTop {
+    display: block;
+}
+
+.goTop__text {
+    position: fixed;
+    background: rgba(252, 248, 241, 0.8);
+    box-shadow: 2px 2px 5px black;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    bottom: 5%;
+    left: 90%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.goTop__text:hover {
+    transform: scale(1.1);
+}
+
+
+
 /* @layer base {
     .lavender {
         @apply bg-lavander-light dark:bg-lavander-dark
     }
 } */
 
-/* body {
-    background-color: #D58D8D;
-} */
+body {
+    background-color: #a78bfa;
+}
+
+nav {
+    background-color: #d58D8D;
+}
 
 /* body.dark {
     background-color: #381717;

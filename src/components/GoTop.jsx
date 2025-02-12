@@ -4,7 +4,6 @@ const GoTop = () => {
   const [showGoTop, setShowGoTop] = useState("goTopHidden");
 
   const handleVisibleButton = () => {
-    console.log("Scroll position:", window.scrollY); // Debugging log
 
     if (window.scrollY > 50) {
       setShowGoTop("goTop");
@@ -14,10 +13,8 @@ const GoTop = () => {
   };
 
   useEffect(() => {
-    console.log("GoTop component mounted!"); // Debugging log
     window.addEventListener("scroll", handleVisibleButton);
-    handleVisibleButton(); // Check visibility immediately
-
+    handleVisibleButton();
     return () => {
       window.removeEventListener("scroll", handleVisibleButton);
     };

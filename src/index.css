@@ -45,14 +45,6 @@ input:checked~.dot {
     transform: scale(1.1);
 }
 
-
-
-/* @layer base {
-    .lavender {
-        @apply bg-lavander-light dark:bg-lavander-dark
-    }
-} */
-
 body {
     background-color: #a78bfa;
 }
@@ -60,15 +52,3 @@ body {
 nav {
     background-color: #d58D8D;
 }
-
-/* body.dark {
-    background-color: #381717;
-} */
-/* 
-.light-mode {
-    background-color: #a78bfa;
-}
-
-.dark-mode {
-    background-color: #240a70;
-} */

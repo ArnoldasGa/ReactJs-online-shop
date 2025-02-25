@@ -4,7 +4,6 @@ const GoTop = () => {
   const [showGoTop, setShowGoTop] = useState("goTopHidden");
 
   const handleVisibleButton = () => {
-
     if (window.scrollY > 50) {
       setShowGoTop("goTop");
     } else {
@@ -21,7 +20,10 @@ const GoTop = () => {
   }, []);
 
   return (
-    <div className={showGoTop} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+    <div
+      className={showGoTop}
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+    >
       <button className="goTop">
         <i className="goTop__text fas fa-angle-up"></i>
       </button>

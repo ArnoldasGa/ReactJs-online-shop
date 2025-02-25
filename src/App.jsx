@@ -11,6 +11,8 @@ import HomePage from './pages/HomePage';
 import ItemsPage from './pages/ItemsPage';
 import AboutPage from './pages/AboutPage';
 import SingeItemPage from './pages/SingleItemPage';
+import LoginPage from './pages/LoginPage';
+import Register from './pages/Register';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +21,8 @@ const router = createBrowserRouter(
      <Route path='/items' element={<ItemsPage/>}/>
      <Route path='/about' element={<AboutPage/>}/>
      <Route path='/items/:name/:id' element={<SingeItemPage/>}/>
+     <Route path='/login' element={<LoginPage/>}/>
+     <Route path='/register' element={<Register/>}/>
   </Route>
 
 )

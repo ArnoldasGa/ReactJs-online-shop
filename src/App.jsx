@@ -13,6 +13,9 @@ import AboutPage from './pages/AboutPage';
 import SingeItemPage from './pages/SingleItemPage';
 import LoginPage from './pages/LoginPage';
 import Register from './pages/Register';
+import Profile from './pages/Profile';
+import Sitemap from './pages/Sitemap';
+import HTMLSitemap from './pages/HTMLSitemaps';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +26,9 @@ const router = createBrowserRouter(
      <Route path='/items/:name/:id' element={<SingeItemPage/>}/>
      <Route path='/login' element={<LoginPage/>}/>
      <Route path='/register' element={<Register/>}/>
+     <Route path='/profile' element={<Profile/>}/>
+     <Route path='/sitemap' element={<Sitemap />} />
+     <Route path='/HTMLsitemap' element={<HTMLSitemap />} />  {/* Pridėkite HTML žemėlapį */}
   </Route>
 
 )

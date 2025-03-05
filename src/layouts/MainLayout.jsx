@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import GoTop from "../components/GoTop";
 import { CartProvider } from "../components/CartContext";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 // import FullProduct from './FullProduct'; // Example of FullProduct component
 // import MiniCart from './MiniCart'; // ✅ Import the button!
 

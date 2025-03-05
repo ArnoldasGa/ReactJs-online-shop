@@ -6,7 +6,7 @@ function HomePage() {
   return (
     <>
     <Hero/>
-      <div class="flex flex-wrap justify-center mt-10 bg-lime-700">
+      <div className="flex flex-wrap justify-center mt-10 bg-lime-700">
         {/* <Card/>
         <Card/>
         <Card/> */}
